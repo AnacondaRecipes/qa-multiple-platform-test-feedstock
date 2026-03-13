@@ -1,0 +1,26 @@
+{% set name = "qa-multiple-platform-test" %}
+{% set version = "0.1.0" %}
+
+package:
+  name: {{ name }}
+  version: {{ version }}
+
+source:
+  path: ..
+
+build:
+  number: 0
+
+requirements:
+  build:
+    - python
+  run:
+    - python
+
+test:
+  commands:
+    - qa-multiple-platform-test
+
+about:
+  summary: "QA dummy package for testing multiple platform builds"
+  license: MIT
